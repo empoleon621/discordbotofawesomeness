@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.env
+.env.*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+#images 
+images/
+
+#discord
+discord.log
