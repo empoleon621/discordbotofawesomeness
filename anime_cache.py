@@ -8,10 +8,10 @@ import httpx
 # AniList GraphQL endpoint
 ANILIST_URL = "https://graphql.anilist.co"
 
-# how many top titles to maintain and paging
+
 TOP_N = 500
-PER_PAGE = 50  # 10 pages of 50 == 500
-FRESHNESS = timedelta(minutes=10)  # how long before refresh
+PER_PAGE = 50  # 
+FRESHNESS = timedelta(minutes=10)  
 
 # GraphQL to get popular anime sorted by popularity descending
 TOP_ANIME_QUERY = """
@@ -90,9 +90,9 @@ class AniListCache:
             for page in range(1, pages + 1):
                 page_titles = await self._fetch_page(page)
                 if not page_titles:
-                    break  # bail on failure, keep whatever we have
+                    break  # bail on failure
                 all_titles.extend(page_titles)
-                # throttle a bit to be polite / avoid transient throttling
+                #limiter
                 await asyncio.sleep(0.2)
                 if len(all_titles) >= TOP_N:
                     break
@@ -105,7 +105,7 @@ class AniListCache:
         if not self.titles:
             return []
         lowered = current.lower()
-        # simple substring match (could be improved with fuzzy logic)
+        # simple substring match 
         matches = [t for t in self.titles if lowered in t.lower()]
         return matches[:25]
 

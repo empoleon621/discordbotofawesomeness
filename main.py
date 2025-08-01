@@ -114,7 +114,7 @@ async def animedetails(interaction: discord.Interaction, anime: str):
 
 @animedetails.autocomplete("anime")
 async def animeautocomplete(interaction: discord.Interaction, current: str):
-    await anime_cache.refresh_if_stale()  # ok if fast, or skip if you already warm it
+    await anime_cache.refresh_if_stale()  
     suggestions = await anime_cache.get_suggestions(current)
     return [app_commands.Choice(name=s, value=s) for s in suggestions]
 
