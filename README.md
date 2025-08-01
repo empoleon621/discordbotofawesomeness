@@ -40,54 +40,15 @@ A modular, high-performance Discord bot built with Python and `discord.py`. Desi
 
 ---
 
-## ⚙️ Setup Instructions
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/aidens-discord-bot.git
-cd aidens-discord-bot
-```
-
-### 2. Install requirements
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Set up your `.env`
-
-Create a `.env` file in the project root:
-
-```env
-DISCORD_TOKEN=your_discord_bot_token_here
-```
-
-### 4. Run the bot
-
-```bash
-python main.py
-```
-
----
-
 ## 🛠️ Planned Features
 
 - 🎮 Game stats integration
 - 📊 Polls and voting
 - 🎧 Music or soundboard support
-- 📂 Modular plugin loading system
-- 🧠 GPT-style conversation command
+- 🎮 Pokepy integration for pokemon stats and tools
 
 ---
 
-## 🧑‍💻 Author
-
-**Aiden Solomon**  
-Building tools at the intersection of fun and function.  
-Contributions and ideas welcome!
-
----
 
 ## 📜 License
 
